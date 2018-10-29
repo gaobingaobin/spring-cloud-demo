@@ -1,0 +1,17 @@
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: service-config
+      username: gaobin
+      password: gaobin123
+  application:
+    name: fooder
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,49 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gaobingaobin/spring-cloud-config-git-repo
+  security:
+    user:
+      name: gaobin
+      password: gaobin123
+  application:
+    name: service-config
+
+#配合eureka使用
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#encrypt:
+#  keyStore:
+#    location: classpath:/server.jks
+#    password: letmein
+#    alias: mytestkey
+#    secret: changeme
+
+  #模式匹配方式
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/gaobingaobin/spring-cloud-config-git-repo
+#          repos:
+#            simple: https://github.com/gaobingaobin/simple
+#            special:
+#              pattern: special*/dev*,*special*/dev*
+#              uri: https://github.com/gaobingaobin/special
+
+# 通配符方式
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/gaobingaobin/{application}
+#
