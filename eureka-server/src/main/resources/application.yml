@@ -1,28 +1,31 @@
-server:
-  port: 8761
-
-eureka:
-  instance:
-    hostname: localhost
-    #表明是eureka server
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-#      defaultZone: http://gaobin:123@${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-      # 关闭自我保护机制
-      enable-self-preservation: false
-      # 每隔10s扫描服务列表，移除失效服务 默认是60s
-      eviction-interval-timer-in-ms: 10000
-
+#server:
+#  port: 8761
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#    #表明是eureka server
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+##      defaultZone: http://gaobin:123@${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  server:
+#      # 关闭自我保护机制
+#      enable-self-preservation: false
+#      # 每隔10s扫描服务列表，移除失效服务 默认是60s
+#      eviction-interval-timer-in-ms: 10000
+#
+##spring:
+##  application:
+##    name: eurka-server
+##  security:
+##    basic:
+##      enabled: true
+##    user:
+##      password: 123
+##      name: gaobin
 spring:
-  application:
-    name: eurka-server
-#  security:
-#    basic:
-#      enabled: true
-#    user:
-#      password: 123
-#      name: gaobin
+  profiles:
+    active: peer1

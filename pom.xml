@@ -6,7 +6,7 @@
     <groupId>com.cloud</groupId>
     <artifactId>spring-cloud-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>spring-cloud-demo</name>
     <description>Demo project for Spring Boot</description>
@@ -25,6 +25,7 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>config-client-bus</module>
+        <module>service-zuul</module>
     </modules>
 
     <properties>
